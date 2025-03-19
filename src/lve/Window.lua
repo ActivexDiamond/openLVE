@@ -37,7 +37,7 @@ local function hookIntoGlfwEvents(self)
 			evKeyRelease.key, evKeyRelease.scancode = key, scancode
 			evKeyRelease.shift, evKeyRelease.control, evKeyRelease.alt, evKeyRelease.super = shift, control, alt, super
 			self.eventSystem:_fire(evKeyRelease)
-		end --Currently, 'repeat' is ignored.
+		end --Currently, 'repeat' is ignored (for EvKeyPress/EvKeyRelease, use EvTextInput if you need it.
 	end)
 
 	local evTextInput = EvTextInput:newUnlocked()
